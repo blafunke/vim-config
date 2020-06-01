@@ -1,6 +1,7 @@
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set autoread
 
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
