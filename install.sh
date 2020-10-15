@@ -9,3 +9,8 @@ cp ~/.vimrc ~/.vimrc.bak 2>/dev/null
 cp .vimrc ~/.vimrc
 
 vim +PlugInstall +qall
+
+ Post Install
+pushd ~/.vim/plugged/YouCompleteMe/
+    python3 ./install.py --clangd-completer --ts-completer
+popd
