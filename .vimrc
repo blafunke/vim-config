@@ -3,6 +3,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set autoread
+au CursorHold * checktime
 set backspace=indent,eol,start
 
 
@@ -13,10 +14,12 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 call plug#begin()
 
 Plug 'scrooloose/nerdtree'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'ycm-core/YouCompleteMe'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 
 map \ :NERDTreeToggle<CR>
 
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
